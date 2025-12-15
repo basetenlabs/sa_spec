@@ -1,0 +1,161 @@
+{
+    "engine": {
+        "model": "nvidia/DeepSeek-V3.1-NVFP4",
+        "model_path": "None",
+        "engine_dir": "None",
+        "revision": null,
+        "version": "1.2",
+        "backend": "Pytorch",
+        "dtype": "bfloat16",
+        "kv_cache_dtype": "FP8",
+        "quantization": "NVFP4"
+    },
+    "machine": {
+        "name": "NVIDIA B200",
+        "memory.total": 178.3511962890625,
+        "clocks.mem": 3.996
+    },
+    "world_info": {
+        "tp_size": 8,
+        "pp_size": 1,
+        "ep_size": null,
+        "world_size": 8,
+        "max_batch_size": 1,
+        "max_num_tokens": 2048,
+        "scheduling_policy": "GUARANTEED_NO_EVICT",
+        "kv_cache_percentage": 0.9,
+        "issue_rate": 1.8832705997211538e+18
+    },
+    "request_info": {
+        "num_requests": 104,
+        "avg_num_concurrent_requests": 7.580834849602336,
+        "avg_input_length": 422.7692307692308,
+        "avg_output_length": 2048.0
+    },
+    "performance": {
+        "total_latency_ms": 214159.46160799998,
+        "avg_request_latency_ms": 15610.649133942308,
+        "request_throughput_req_s": 0.4856194501943735,
+        "system_output_throughput_tok_s": 994.548633998077,
+        "system_total_throughput_tok_s": 1199.8535954033289,
+        "output_throughput_per_user_tok_s": 138.80288546544114,
+        "output_throughput_per_gpu_tok_s": 124.31857924975962,
+        "request_latency_percentiles_ms": {
+            "p50": 16255.466593,
+            "p90": 20022.83767,
+            "p95": 20650.797884,
+            "p99": 25100.132707,
+            "minimum": 8663.823349999999,
+            "maximum": 25490.120251,
+            "average": 15610.649133942308
+        }
+    },
+    "streaming_metrics": {
+        "token_output_speed_tok_s": 140.6152566620352,
+        "avg_ttft_ms": 186.42598966346154,
+        "avg_tpot_ms": 7.535038175026304,
+        "tpot_percentiles": {
+            "p50": 7.870005365901319,
+            "p90": 9.719878683439179,
+            "p95": 10.014624908158279,
+            "p99": 12.190662755251587,
+            "minimum": 4.156518297020029,
+            "maximum": 12.375779101123594,
+            "average": 7.535038175026304
+        },
+        "ttft_percentiles": {
+            "p50": 150.808599,
+            "p90": 162.38339299999998,
+            "p95": 670.694698,
+            "p99": 670.8622849999999,
+            "minimum": 113.468322,
+            "maximum": 670.960824,
+            "average": 186.42598966346154
+        },
+        "gen_tps_percentiles": {
+            "p50": 127.9995153571921,
+            "p90": 186.58596332813792,
+            "p95": 202.27443551231534,
+            "p99": 214.75458350613155,
+            "minimum": 80.8029936401507,
+            "maximum": 240.58597329330635,
+            "average": 140.6152566620352
+        }
+    },
+    "decoding_stats": {
+        "mode": "MTP",
+        "num_draft_tokens_percentiles": {
+            "p50": 4040.0,
+            "p90": 5040.0,
+            "p95": 5136.0,
+            "p99": 6296.0,
+            "minimum": 2176.0,
+            "maximum": 6384.0,
+            "average": 3907.769230769231
+        },
+        "num_accepted_draft_tokens_percentiles": {
+            "p50": 1543.0,
+            "p90": 1702.0,
+            "p95": 1723.0,
+            "p99": 1746.0,
+            "minimum": 1250.0,
+            "maximum": 1776.0,
+            "average": 1559.5288461538462
+        },
+        "draft_acceptance_rate_percentiles": {
+            "p50": 0.38193069306930694,
+            "p90": 0.6148843930635838,
+            "p95": 0.6626923076923077,
+            "p99": 0.722682119205298,
+            "minimum": 0.19580200501253134,
+            "maximum": 0.8161764705882353,
+            "average": 0.4299096408387983
+        },
+        "acceptance_length_percentiles": {
+            "p50": 4.0554455445544555,
+            "p90": 5.91907514450867,
+            "p95": 6.3015384615384615,
+            "p99": 6.781456953642384,
+            "minimum": 2.5664160401002505,
+            "maximum": 7.529411764705882,
+            "average": 4.439277126710386
+        }
+    },
+    "dataset": {
+        "isl_stats": {
+            "p50": 416.0,
+            "p90": 593.0,
+            "p95": 630.0,
+            "p99": 663.0,
+            "minimum": 154.0,
+            "maximum": 783.0,
+            "average": 422.7692307692308
+        },
+        "osl_stats": {
+            "p50": 2048.0,
+            "p90": 2048.0,
+            "p95": 2048.0,
+            "p99": 2048.0,
+            "minimum": 2048.0,
+            "maximum": 2048.0,
+            "average": 2048.0
+        },
+        "seq_len_stats": {
+            "p50": 2464.0,
+            "p90": 2641.0,
+            "p95": 2678.0,
+            "p99": 2711.0,
+            "minimum": 2202.0,
+            "maximum": 2831.0,
+            "average": 2470.769230769231
+        },
+        "num_requests": 104,
+        "dataset_path": "/workspace/model-performance/mahmoud1/mp-airport/dataset.jsonl",
+        "max_isl": 783,
+        "max_osl": 2048,
+        "max_sequence_length": 2831,
+        "avg_isl": 422,
+        "avg_osl": 2048,
+        "avg_sequence_length": 2470
+    }
+}
