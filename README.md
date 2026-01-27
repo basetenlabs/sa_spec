@@ -17,7 +17,7 @@ Find the reference integration with TensorRT-LLM at https://github.com/NVIDIA/Te
 
 -----
 
-As described in [the blog post](https://www.baseten.co/blog/boosting-mtp-acceptance-rates-in-tensorrt-llm/#integrating-with-tensorrt-llm), the API consists of 3 functions:
+As described in [the blog post](https://www.baseten.co/blog/boosting-mtp-acceptance-rates-in-baseten-speculation-engine/), the API consists of 3 functions:
 - `sa_spec.add_request(request_id: int, context: list[int])` is called on incoming requests. It builds the suffix automaton state using the context tokens and store the state it in host memory.
 - `sa_spec.prepare(request_ids: list[int])` is called on generation requests before every iteration. It allocates batch indices for the new generation requests and copies their states from the host to the device. Additionally, it copies mapping of _\{external batch index -> suffix automaton batch index\}_ for the active generation requests, which is useful in case TRT-LLM shuffles the requests.
 - `sa_spec.extend(...)` a CUDA-graph-compatible operation that updates the states of generation requests in the decode lookup. Explanation of its parameters: 
