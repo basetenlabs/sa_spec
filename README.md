@@ -1,5 +1,7 @@
 # **S**uffix **A**utomaton **Spec**ulative Decoding
 
+Update: this project is now [merged in TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM/pull/11434).
+
 Per-user TPS            |  Accept Length
 :-------------------------:|:-------------------------:
 ![tps](./bench/tps.png) | ![al](./bench/al.png)
